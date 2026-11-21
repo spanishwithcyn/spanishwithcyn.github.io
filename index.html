@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spanish with Cyn – Lekce španělštiny v Praze a online</title>
+<meta name="description" content="Lekce španělštiny s rodilou mluvčí. Praha i online. První lekce 30 minut zdarma – napište na WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --green:#1595A8; --green-2:#117E8F; --cream:#FFF8EC; --sand:#FFEBC7; --line:#F3DFB5;
+    --terra:#1595A8; --terra-dark:#0F6F7E; --gold:#FFE8A8; --ink:#0E3A42; --soft:#2D545B;
+    --wa:#1F7A4D; --wa-dark:#17633E;
+    --display:Poppins, system-ui, sans-serif; --body:Poppins, system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);line-height:1.6;font-size:17px}
+  a{color:var(--terra-dark)}
+  a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+  img{max-width:100%;display:block}
+  h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;line-height:1.05;text-wrap:balance}
+  p{margin:0 0 1rem}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
+  section{padding:5rem 0}
+  .eyebrow{font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--terra-dark);margin-bottom:.8rem}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.75rem 1.4rem;border-radius:999px;font:600 1rem var(--body);text-decoration:none;border:2px solid transparent;cursor:pointer}
+  .btn svg{width:22px;height:22px;flex:none}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-wa:hover{background:var(--wa-dark)}
+  .btn-line{border-color:currentColor;color:inherit;background:transparent}
+  .btn-line:hover{background:rgba(0,0,0,.05)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:30;background:rgba(251,247,242,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:68px}
+  .brand{font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--green);text-decoration:none}
+  .nav-right{display:flex;align-items:center;gap:.6rem}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{border:0;background:transparent;font:600 .85rem var(--body);padding:.55rem .8rem;min-height:44px;cursor:pointer;color:var(--soft)}
+  .lang button[aria-pressed="true"]{background:var(--green);color:#fff}
+  @media(max-width:560px){ nav .btn-wa span{display:none} nav .btn-wa{padding:.75rem} }
+
+  /* hero */
+  .hero{background:var(--gold);color:var(--ink);padding:4.5rem 0 5rem}
+  .hero .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:3rem;align-items:center}
+  @media(max-width:820px){ .hero .wrap{grid-template-columns:1fr} .hero-photo{order:-1;max-width:340px} }
+  .hero .eyebrow{color:var(--green)}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin-bottom:1.2rem}
+  .hero .lead{font-size:1.2rem;color:var(--ink);max-width:46ch;margin-bottom:2rem}
+  .actions{display:flex;flex-wrap:wrap;gap:.8rem}
+  .hero .btn-line{color:var(--ink)}
+  .hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:24px}
+  .badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+  .badge{background:rgba(255,255,255,.55);border-radius:999px;padding:.45rem 1rem;font-weight:600;font-size:.92rem}
+
+  /* cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+  .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:1.6rem}
+  .card h3{font-size:1.35rem;margin-bottom:.5rem;color:var(--green)}
+  .card p{color:var(--soft);margin:0}
+  h2.title{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:2.2rem;color:var(--green)}
+
+  /* about */
+  .about{background:var(--sand)}
+  .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+  @media(max-width:820px){ .about .wrap{grid-template-columns:1fr} }
+  .certs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.7rem}
+  .certs li{background:#fff;border-radius:14px;padding:.9rem 1.1rem;font-weight:500}
+
+  /* who */
+  .who .card{display:flex;flex-direction:column;gap:1rem}
+  .who .card .btn{margin-top:auto;align-self:flex-start}
+
+  /* prices */
+  .prices{background:var(--sand)}
+  .price{font-family:var(--display);font-weight:600;font-size:2.4rem;color:var(--ink);margin:.4rem 0 .6rem}
+  .price small{font:500 1rem var(--body);color:var(--soft)}
+  .card.hot{background:var(--green);color:var(--cream);border-color:var(--green)}
+  .card.hot h3,.card.hot .price{color:var(--gold)}
+  .card.hot p{color:#E8F7FA}
+
+  /* form */
+  .book{background:var(--gold);color:var(--ink)}
+  .book .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:start}
+  @media(max-width:820px){ .book .wrap{grid-template-columns:1fr} }
+  .book h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:1rem}
+  .book .eyebrow{color:var(--terra-dark)}
+  form{background:var(--cream);color:var(--ink);border-radius:24px;padding:1.8rem;display:grid;gap:1rem}
+  label{font-weight:600;font-size:.95rem;display:block;margin-bottom:.35rem}
+  input,select,textarea{width:100%;min-height:48px;border:1px solid #CFC3B2;border-radius:12px;padding:.7rem .9rem;font:1rem var(--body);background:#fff;color:var(--ink)}
+  textarea{min-height:90px;resize:vertical}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  @media(max-width:520px){ .row2{grid-template-columns:1fr} }
+  form .btn-wa{width:100%;font-size:1.05rem}
+  .hint{font-size:.85rem;color:var(--soft);margin:0}
+
+  .qrbox{display:flex;gap:1.2rem;align-items:center;margin-top:1.5rem;background:rgba(255,255,255,.55);border-radius:20px;padding:1rem}
+  .qrbox img{width:150px;height:auto;border-radius:12px;flex:none}
+  .qrbox p{margin:0}
+  @media(max-width:820px){ .qrbox{display:none} }
+  /* faq */
+  details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.3rem}
+  details+details{margin-top:.8rem}
+  summary{font-weight:700;cursor:pointer;min-height:28px}
+  details p{margin:.7rem 0 0;color:var(--soft)}
+
+  footer{background:var(--green);color:#E8F7FA;padding:3rem 0 6rem}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem}
+  footer a{color:#fff}
+
+  /* floating whatsapp */
+  .wa-float{position:fixed;right:18px;bottom:18px;z-index:40;width:62px;height:62px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  .wa-float:hover{background:var(--wa-dark)}
+  .wa-float svg{width:34px;height:34px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.9 9.9 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.24 8.24 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29Z"/></symbol>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Spanish with Cyn</a>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Jazyk / Language">
+        <button type="button" data-lang="cs" aria-pressed="true">CZ</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn-wa" data-wa="trial" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="navCta">Lekce zdarma</span></a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-t="heroEyebrow">Lekce španělštiny · Praha i online</p>
+      <h1 data-t="heroTitle" style="letter-spacing:-.01em">Španělština s hudbou, barvou a chutí.</h1>
+      <p class="lead" data-t="heroLead">Učte se s rodilou mluvčí. Mluvit budete od první lekce – ne jen časovat slovesa.</p>
+      <div class="actions">
+        <a class="btn btn-wa" data-wa="trial" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="heroCta">Chci první lekci zdarma</span></a>
+        <a class="btn btn-line" href="#rezervace" data-t="heroCta2">Vybrat termín</a>
+      </div>
+      <div class="badges">
+        <span class="badge" data-t="b1">První lekce 30 min zdarma</span>
+        <span class="badge" data-t="b2">Online i osobně</span>
+        <span class="badge" data-t="b3">MBA, 4 roky výuky</span>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="cyn.jpg" alt="Cyn, lektorka španělštiny" width="598" height="800"></div>
+  </div>
+</header>
+
+<section class="who">
+  <div class="wrap">
+    <p class="eyebrow" data-t="whoEyebrow">Pro koho</p>
+    <h2 class="title" data-t="whoTitle">Proč se chcete učit španělsky?</h2>
+    <div class="grid">
+      <div class="card"><h3 data-t="w1t">Cestování</h3><p data-t="w1p">Objednat si jídlo, zeptat se na cestu a bavit se s místními – ve Španělsku i kdekoli na světě.</p><a class="btn btn-wa" data-wa="travel" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="ask">Napsat</span></a></div>
+      <div class="card"><h3 data-t="w2t">Práce</h3><p data-t="w2p">Meetingy, e-maily a vyjednávání se španělsky mluvícími klienty a kolegy.</p><a class="btn btn-wa" data-wa="work" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="ask">Napsat</span></a></div>
+      <div class="card"><h3 data-t="w3t">Od nuly</h3><p data-t="w3p">Začínáte úplně od začátku? Žádný stres – jdeme vaším tempem.</p><a class="btn btn-wa" data-wa="beginner" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="ask">Napsat</span></a></div>
+      <div class="card"><h3 data-t="w4t">Konverzace</h3><p data-t="w4p">Už něco umíte, ale chcete mluvit plynuleji a s jistotou.</p><a class="btn btn-wa" data-wa="conversation" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="ask">Napsat</span></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="o-mne">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-t="aboutEyebrow">O mně</p>
+      <h2 class="title" style="margin-bottom:1.2rem">Cyn</h2>
+      <p data-t="about1">Španělštinu učím 4 roky, hlavně dospělé a profesionály, kteří žijí v Praze. Moje lekce jsou interaktivní: konverzace, hudba a situace ze skutečného života.</p>
+      <p data-t="about2">Předtím jsem budovala kariéru v mezinárodním byznysu, takže rozumím tomu, co potřebujete, když španělštinu používáte v práci.</p>
+      <a class="btn btn-line" style="color:var(--green)" href="https://www.expats.cz/teachers/profile/language-teachers/mgt-cynthia-de-pinho-uvqsl" target="_blank" rel="noopener" data-t="expatsCta">Můj profil na Expats.cz</a>
+    </div>
+    <div>
+      <p class="eyebrow" data-t="certEyebrow">Vzdělání a certifikáty</p>
+      <ul class="certs">
+        <li>Mgt. Strategic Business Administration (MBA)</li>
+        <li>Online Teaching Methodology Course</li>
+        <li>Music, Games and Creativity in the Spanish Classroom</li>
+        <li>Cultural Competence in Language Teaching</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="metoda">
+  <div class="wrap">
+    <p class="eyebrow" data-t="methodEyebrow">Metoda</p>
+    <h2 class="title" data-t="methodTitle">4 dovednosti a živá kultura</h2>
+    <div class="grid">
+      <div class="card"><h3 data-t="m1t">Mluvení</h3><p data-t="m1p">Konverzace a hraní rolí od první lekce.</p></div>
+      <div class="card"><h3 data-t="m2t">Poslech</h3><p data-t="m2p">Skutečné nahrávky, písničky a videa.</p></div>
+      <div class="card"><h3 data-t="m3t">Gramatika</h3><p data-t="m3p">Nové struktury v kontextu, bez nekonečných pravidel.</p></div>
+      <div class="card"><h3 data-t="m4t">Čtení a psaní</h3><p data-t="m4p">Krátké texty a zprávy ze skutečného života.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="prices" id="ceny">
+  <div class="wrap">
+    <p class="eyebrow" data-t="priceEyebrow">Ceny</p>
+    <h2 class="title" data-t="priceTitle">Jednoduché ceny</h2>
+    <div class="grid">
+      <div class="card hot"><h3 data-t="p1t">Zkušební lekce</h3><p class="price" data-t="p1price">Zdarma <small>/ 30 min</small></p><p data-t="p1p">Bez závazku. Zjistíme vaši úroveň a cíle.</p></div>
+      <div class="card"><h3 data-t="p2t">Jednotlivá lekce</h3><p class="price">599 Kč <small data-t="perHour">/ hodina</small></p><p data-t="p2p">Online nebo osobně, čas podle vás.</p></div>
+      <div class="card"><h3 data-t="p3t">Balíček 3 nebo 6 měsíců</h3><p class="price" data-t="p3price">Výhodnější <small>cena na míru</small></p><p data-t="p3p">Pravidelné lekce každý týden. Cenu domluvíme podle vašeho cíle a rozvrhu.</p><a class="btn btn-wa" data-wa="package" href="#" target="_blank" rel="noopener" style="margin-top:1rem;background:var(--green)"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="pkgCta">Zeptat se na cenu</span></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="rezervace">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-t="bookEyebrow">Rezervace</p>
+      <h2 data-t="bookTitle">Rezervujte si lekci zdarma</h2>
+      <p data-t="bookLead">Vyplňte 4 políčka a stiskněte tlačítko. Otevře se WhatsApp s připravenou zprávou – stačí ji jen odeslat. Odpovím co nejdřív.</p>
+      <div class="qrbox"><img src="qr-whatsapp.png" alt="QR kód: WhatsApp" width="180" height="198"><p data-t="qrText">Jste na počítači? Naskenujte QR kód mobilem a napište mi rovnou na WhatsApp.</p></div>
+    </div>
+    <form id="bookForm" novalidate>
+      <div>
+        <label for="f-name" data-t="fName">Jméno</label>
+        <input id="f-name" name="name" autocomplete="given-name" required>
+      </div>
+      <div class="row2">
+        <div>
+          <label for="f-level" data-t="fLevel">Vaše úroveň</label>
+          <select id="f-level" name="level">
+            <option value="0" data-t="l0">Úplný začátečník</option>
+            <option value="1" data-t="l1">Trochu umím</option>
+            <option value="2" data-t="l2">Středně pokročilý</option>
+            <option value="3" data-t="l3">Pokročilý</option>
+          </select>
+        </div>
+        <div>
+          <label for="f-goal" data-t="fGoal">Cíl</label>
+          <select id="f-goal" name="goal">
+            <option value="0" data-t="g0">Cestování</option>
+            <option value="1" data-t="g1">Práce</option>
+            <option value="2" data-t="g2">Konverzace</option>
+            <option value="3" data-t="g3">Zkouška (DELE, maturita)</option>
+          </select>
+        </div>
+      </div>
+      <div class="row2">
+        <div>
+          <label for="f-mode" data-t="fMode">Forma</label>
+          <select id="f-mode" name="mode">
+            <option value="0">Online</option>
+            <option value="1" data-t="mo1">Osobně v Praze</option>
+            <option value="2" data-t="mo2">Je mi to jedno</option>
+          </select>
+        </div>
+        <div>
+          <label for="f-time" data-t="fTime">Kdy se vám to hodí?</label>
+          <select id="f-time" name="time">
+            <option value="0" data-t="t0">Ráno</option>
+            <option value="1" data-t="t1">Odpoledne</option>
+            <option value="2" data-t="t2">Večer</option>
+            <option value="3" data-t="t3">Víkend</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label for="f-note" data-t="fNote">Poznámka (nepovinné)</label>
+        <textarea id="f-note" name="note"></textarea>
+      </div>
+      <a class="btn btn-wa" id="formSend" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="fSubmit">Odeslat přes WhatsApp</span></a>
+      <p class="hint" id="formHint" data-t="fHint">Nemáte WhatsApp? Napište na spanishwithcyn@gmail.com</p>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="title" data-t="faqTitle">Časté otázky</h2>
+    <details><summary data-t="q1">Je první lekce opravdu zdarma?</summary><p data-t="a1">Ano. 30 minut, bez závazku. Poznáme se a zjistíme vaši úroveň.</p></details>
+    <details><summary data-t="q2">Jakou španělštinu učíte?</summary><p data-t="a2">Standardní španělštinu, kterou použijete ve Španělsku i kdekoli na světě.</p></details>
+    <details><summary data-t="q3">Kde probíhají osobní lekce?</summary><p data-t="a3">V Praze – místo domluvíme podle toho, co vám vyhovuje.</p></details>
+    <details><summary data-t="q4">Mluvíte česky nebo anglicky?</summary><p data-t="a4">Lekce vedu ve španělštině a v angličtině.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Spanish with Cyn · Praha</span>
+    <span><a data-wa="trial" href="#" target="_blank" rel="noopener">WhatsApp +420 773 730 444</a> · <a href="mailto:spanishwithcyn@gmail.com">spanishwithcyn@gmail.com</a> · <a href="https://www.expats.cz/teachers/profile/language-teachers/mgt-cynthia-de-pinho-uvqsl" target="_blank" rel="noopener">Expats.cz</a></span>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa="trial" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script>
+const PHONE = "420773730444";
+const T = {
+  cs: {}, // filled from the page
+  en: {
+    navCta:"Free lesson", heroEyebrow:"Spanish lessons · Prague & online", heroTitle:"Spanish with music, colour and flavour.",
+    heroLead:"Learn with a native speaker. You'll speak from the very first lesson – not just conjugate verbs.",
+    heroCta:"I want my free lesson", heroCta2:"Pick a time", b1:"First 30 min free", b2:"Online & in person", b3:"MBA, 4 years teaching",
+    whoEyebrow:"Who it's for", whoTitle:"Why do you want to learn Spanish?", ask:"Message me",
+    w1t:"Travel", w1p:"Order food, ask for directions and chat with locals – in Spain and anywhere in the world.",
+    w2t:"Work", w2p:"Meetings, emails and negotiations with Spanish-speaking clients and colleagues.",
+    w3t:"From zero", w3p:"Starting from scratch? No stress – we go at your pace.",
+    w4t:"Conversation", w4p:"You know some Spanish but want to speak more fluently and confidently.",
+    aboutEyebrow:"About me",
+    about1:"I've been teaching Spanish for 4 years, mostly to adults and professionals living in Prague. My lessons are interactive: conversation, music and real-life situations.",
+    about2:"Before teaching I built a career in international business, so I understand what you need when you use Spanish at work.",
+    certEyebrow:"Education & certificates", methodEyebrow:"Method", methodTitle:"4 skills plus living culture",
+    m1t:"Speaking", m1p:"Conversation and role-play from the first lesson.", m2t:"Listening", m2p:"Real recordings, songs and videos.",
+    m3t:"Grammar", m3p:"New structures in context, without endless rules.", m4t:"Reading & writing", m4p:"Short texts and real-life messages.",
+    priceEyebrow:"Prices", priceTitle:"Simple prices", p1t:"Trial lesson", p1price:"Free <small>/ 30 min</small>", p1p:"No commitment. We'll find your level and goals.",
+    p2t:"Single lesson", perHour:"/ hour", p2p:"Online or in person, at a time that suits you.",
+    p3t:"3 or 6-month package", p3price:"Better value <small>tailored price</small>", p3p:"Regular weekly lessons. We agree the price based on your goal and schedule.", pkgCta:"Ask about the price",
+    bookEyebrow:"Booking", bookTitle:"Book your free lesson", bookLead:"Fill in 4 fields and press the button. WhatsApp opens with a ready message – just hit send. I'll reply as soon as I can.",
+    fName:"Name", fLevel:"Your level", l0:"Complete beginner", l1:"I know a little", l2:"Intermediate", l3:"Advanced",
+    fGoal:"Goal", g0:"Travel", g1:"Work", g2:"Conversation", g3:"Exam (DELE)", fMode:"Format", mo1:"In person in Prague", mo2:"Either is fine",
+    fTime:"When suits you?", t0:"Morning", t1:"Afternoon", t2:"Evening", t3:"Weekend", fNote:"Note (optional)", fSubmit:"Send via WhatsApp",
+    fHint:"No WhatsApp? Write to spanishwithcyn@gmail.com", faqTitle:"FAQ",
+    q1:"Is the first lesson really free?", a1:"Yes. 30 minutes, no commitment. We get to know each other and find your level.",
+    q2:"Which Spanish do you teach?", a2:"Standard Spanish that you can use in Spain and anywhere in the world.",
+    q3:"Where are in-person lessons?", a3:"In Prague – we'll agree on a place that works for you.",
+    expatsCta:"My profile on Expats.cz", qrText:"On a computer? Scan the QR code with your phone and message me on WhatsApp.",
+    q4:"Do you speak Czech or English?", a4:"I teach in Spanish and English.", nameMissing:"Please write your name."
+  }
+};
+T.cs.nameMissing = "Napište prosím své jméno.";
+document.querySelectorAll("[data-t]").forEach(el => { T.cs[el.dataset.t] = el.innerHTML; });
+
+const MSG = {
+  cs: { trial:"Dobrý den, Cyn! Chtěl/a bych první lekci španělštiny zdarma.",
+        travel:"Dobrý den, Cyn! Chci se naučit španělsky na cestování.",
+        work:"Dobrý den, Cyn! Potřebuji španělštinu do práce.",
+        beginner:"Dobrý den, Cyn! Začínám se španělštinou úplně od nuly.",
+        conversation:"Dobrý den, Cyn! Chci zlepšit konverzaci ve španělštině.",
+        package:"Dobrý den, Cyn! Zajímá mě balíček lekcí na 3 nebo 6 měsíců. Jaká je cena?" },
+  en: { trial:"Hi Cyn! I'd like my free trial Spanish lesson.",
+        travel:"Hi Cyn! I want to learn Spanish for travelling.",
+        work:"Hi Cyn! I need Spanish for work.",
+        beginner:"Hi Cyn! I'm a complete beginner in Spanish.",
+        conversation:"Hi Cyn! I want to improve my Spanish conversation.",
+        package:"Hi Cyn! I'm interested in a 3 or 6-month lesson package. What's the price?" }
+};
+let lang = "cs";
+try { const saved = localStorage.getItem("swc-lang"); if (saved === "en") lang = "en"; } catch(e) {}
+
+const waUrl = text => "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(text);
+
+let apply = function(l){
+  lang = l;
+  document.documentElement.lang = l;
+  document.querySelectorAll("[data-t]").forEach(el => { const v = T[l][el.dataset.t]; if (v) el.innerHTML = v; });
+  document.querySelectorAll("[data-wa]").forEach(a => { a.href = waUrl(MSG[l][a.dataset.wa]); });
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
+  try { localStorage.setItem("swc-lang", l); } catch(e) {}
+};
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => apply(b.dataset.lang)));
+apply(lang);
+
+const form = document.getElementById("bookForm"), send = document.getElementById("formSend");
+function formMsg(){
+  const f = form, txt = n => f[n].options[f[n].selectedIndex].textContent.trim();
+  const L = lang === "en"
+    ? ["Hi Cyn! I'd like to book a free trial Spanish lesson.","Name","Level","Goal","Format","Best time","Note"]
+    : ["Dobrý den, Cyn! Chtěl/a bych si rezervovat zkušební lekci zdarma.","Jméno","Úroveň","Cíl","Forma","Čas","Poznámka"];
+  let m = L[0] + "\n\n" + L[1] + ": " + f.name.value.trim() + "\n" + L[2] + ": " + txt("level") + "\n" + L[3] + ": " + txt("goal") + "\n" + L[4] + ": " + txt("mode") + "\n" + L[5] + ": " + txt("time");
+  if (f.note.value.trim()) m += "\n" + L[6] + ": " + f.note.value.trim();
+  return m;
+}
+function syncSend(){ send.href = waUrl(formMsg()); }
+form.addEventListener("input", syncSend); form.addEventListener("change", syncSend);
+form.addEventListener("submit", e => e.preventDefault());
+send.addEventListener("click", e => {
+  if (!form.name.value.trim()) { e.preventDefault(); form.name.focus(); form.name.setAttribute("aria-invalid","true"); document.getElementById("formHint").textContent = T[lang].nameMissing; return; }
+  syncSend();
+});
+const _apply = apply; apply = l => { _apply(l); syncSend(); };
+syncSend();
+</script>
+</body>
+</html>
