@@ -84,6 +84,10 @@
   .card.hot h3,.card.hot .price{color:var(--gold)}
   .card.hot p{color:#FFF8E6}
   .card{position:relative}
+  .reviews blockquote{margin:0;background:#fff;border:1px solid var(--line);border-left:6px solid var(--orange, #F0532F);border-radius:20px;padding:1.8rem 1.8rem 1.4rem;font-size:1.08rem;line-height:1.6;position:relative}
+  .reviews blockquote::before{content:"“";position:absolute;top:-.35em;left:.4em;font-size:4.5rem;color:#FFD23F;font-family:Georgia,serif;line-height:1}
+  .reviews .who-said{margin-top:1rem;font-weight:700;color:#1D1A4A}
+  .reviews .stars{color:#F0532F;letter-spacing:2px}
   .card.hot6{background:var(--terra);color:#fff;border-color:var(--terra)}
   .card.hot6 h3,.card.hot6 .price{color:#fff}.card.hot6 .price small{color:#FFE9C2}.card.hot6 p{color:#fff}
   .card.hot .price small{color:#E8E4FF;display:block;margin-top:.3rem}.card.hot6 .price small{display:block;margin-top:.3rem}
@@ -331,6 +335,18 @@
   </div>
 </section>
 
+<section class="reviews" id="recenze">
+  <div class="wrap reveal">
+    <p class="eyebrow" data-t="revEyebrow">Recenze</p>
+    <h2 class="title" data-t="revTitle">Co říkají moji studenti</h2>
+    <blockquote>
+      <span class="stars">★★★★★</span>
+      <p>Cyn was super accommodating of our needs, especially since we started out as complete beginners. We did a mix of both online and face-to-face lessons, and they were always really interactive with lots of speaking practice and games. She tailored our lessons specifically to prepare us for our travels […], which motivated us to learn and actually use the language while we were away – it really helped us out on our trip!</p>
+      <p class="who-said">— Aiden</p>
+    </blockquote>
+  </div>
+</section>
+
 <section class="book" id="rezervace">
   <div class="wrap">
     <div>
@@ -444,6 +460,7 @@ const T = {
     fGoal:"Goal", g0:"Travel", g1:"Work", g2:"Conversation", g3:"Exam (DELE)", fMode:"Format", mo1:"In person", mo2:"Either is fine",
     fTime:"When suits you?", t0:"Morning", t1:"Afternoon", t2:"Evening", t3:"Weekend", fNote:"Note (optional)", fSubmit:"Send via WhatsApp",
     fHint:"No WhatsApp? Write to spanishwithcyn@gmail.com", faqTitle:"FAQ",
+    revEyebrow:"Reviews", revTitle:"What my students say",
     q1:"Is the first lesson really free?", a1:"Yes. 30 minutes, no commitment. We get to know each other and find your level.",
     q2:"Which Spanish do you teach?", a2:"Standard Spanish that you can use in Spain and anywhere in the world.",
     q3:"Where are in-person lessons?", a3:"In Prague – we'll agree on a place that works for you.",
