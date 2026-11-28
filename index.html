@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spanish with Cyn – Lekce španělštiny v Praze a online</title>
-<meta name="description" content="Lekce španělštiny s rodilou mluvčí. Praha i online. První lekce 30 minut zdarma – napište na WhatsApp.">
+<meta name="description" content="Lekce španělštiny s rodilou mluvčí. Praha i online. První lekce 30 minut zdarma – rezervujte si ji přes krátký formulář.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;500;700&display=swap">
 <style>
@@ -192,6 +192,7 @@
   .gallery img{width:100%;height:auto}
   .social{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.8rem}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+#bookForm{display:none}
 </style>
 </head>
 <body>
@@ -209,7 +210,7 @@
         <button type="button" data-lang="cs" aria-pressed="true">CZ</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a class="btn btn-wa" data-wa="trial" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="navCta">Lekce zdarma</span></a>
+      <a class="btn btn-wa" data-wa="trial" href="#" target="_blank" rel="noopener"><span data-t="navCta">Lekce zdarma</span></a>
     </div>
   </div>
 </nav>
@@ -222,7 +223,7 @@
       <h1 data-t="heroTitle" style="letter-spacing:-.01em">Španělština s hudbou, barvou a chutí.</h1>
       <p class="lead" data-t="heroLead">Učte se s rodilou mluvčí. Mluvit budete od první lekce – ne jen časovat slovesa.</p>
       <div class="actions">
-        <a class="btn btn-wa" data-wa="trial" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="heroCta">Chci první lekci zdarma</span></a>
+        <a class="btn btn-wa" data-wa="trial" href="#" target="_blank" rel="noopener"><span data-t="heroCta">Chci první lekci zdarma</span></a>
         <a class="btn btn-line" href="#rezervace" data-t="heroCta2">Vybrat termín</a>
       </div>
       <div class="badges">
@@ -241,10 +242,10 @@
     <p class="eyebrow" data-t="whoEyebrow">Pro koho</p>
     <h2 class="title" data-t="whoTitle">Proč se chcete učit španělsky?</h2>
     <div class="grid">
-      <div class="card"><h3 data-t="w1t">Cestování</h3><p data-t="w1p">Objednat si jídlo, zeptat se na cestu a bavit se s místními – ve Španělsku i kdekoli na světě.</p><a class="btn btn-wa" data-wa="travel" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="ask">Napsat</span></a></div>
-      <div class="card"><h3 data-t="w2t">Práce</h3><p data-t="w2p">Meetingy, e-maily a vyjednávání se španělsky mluvícími klienty a kolegy.</p><a class="btn btn-wa" data-wa="work" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="ask">Napsat</span></a></div>
-      <div class="card"><h3 data-t="w3t">Od nuly</h3><p data-t="w3p">Začínáte úplně od začátku? Žádný stres – jdeme vaším tempem.</p><a class="btn btn-wa" data-wa="beginner" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="ask">Napsat</span></a></div>
-      <div class="card"><h3 data-t="w4t">Konverzace</h3><p data-t="w4p">Už něco umíte, ale chcete mluvit plynuleji a s jistotou.</p><a class="btn btn-wa" data-wa="conversation" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="ask">Napsat</span></a></div>
+      <div class="card"><h3 data-t="w1t">Cestování</h3><p data-t="w1p">Objednat si jídlo, zeptat se na cestu a bavit se s místními – ve Španělsku i kdekoli na světě.</p><a class="btn btn-wa" data-wa="travel" href="#" target="_blank" rel="noopener"><span data-t="ask">Napsat</span></a></div>
+      <div class="card"><h3 data-t="w2t">Práce</h3><p data-t="w2p">Meetingy, e-maily a vyjednávání se španělsky mluvícími klienty a kolegy.</p><a class="btn btn-wa" data-wa="work" href="#" target="_blank" rel="noopener"><span data-t="ask">Napsat</span></a></div>
+      <div class="card"><h3 data-t="w3t">Od nuly</h3><p data-t="w3p">Začínáte úplně od začátku? Žádný stres – jdeme vaším tempem.</p><a class="btn btn-wa" data-wa="beginner" href="#" target="_blank" rel="noopener"><span data-t="ask">Napsat</span></a></div>
+      <div class="card"><h3 data-t="w4t">Konverzace</h3><p data-t="w4p">Už něco umíte, ale chcete mluvit plynuleji a s jistotou.</p><a class="btn btn-wa" data-wa="conversation" href="#" target="_blank" rel="noopener"><span data-t="ask">Napsat</span></a></div>
     </div>
   </div>
 </section>
@@ -334,8 +335,8 @@
     <div class="grid">
       <div class="card"><h3 data-t="p1t">Zkušební lekce</h3><p class="price" data-t="p1price">Zdarma <small>/ 30 min</small></p><p data-t="p1p">Bez závazku. Zjistíme vaši úroveň a cíle.</p></div>
       <div class="card"><h3 data-t="p2t">Jednotlivá lekce</h3><p class="price">599 Kč <small data-t="perHour">/ hodina</small></p><p data-t="p2p">Online nebo osobně, čas podle vás.</p></div>
-      <div class="card hot"><span class="ribbon" data-t="p3rib">🔥 Oblíbené</span><h3 data-t="p3t">Balíček na 3 měsíce</h3><p class="price" data-t="p3price">Super sleva <small>🎁 výhodnější než jednotlivé lekce</small></p><p data-t="p3p">Každý týden váš pevný termín, plno konverzace a moje podpora i mezi lekcemi. Ideální start – za 3 měsíce uvidíte velký rozdíl!</p><a class="btn btn-wa" data-wa="package3" href="#" target="_blank" rel="noopener" style="margin-top:1rem"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="pkgCta">Chci slevu</span></a></div>
-      <div class="card hot6"><span class="ribbon" data-t="p4rib">💛 Nejlepší cena</span><h3 data-t="p4t">Balíček na 6 měsíců</h3><p class="price" data-t="p4price">Ještě větší sleva <small>✨ nejvýhodnější cena, kterou nabízím</small></p><p data-t="p4p">Pro ty, kdo chtějí opravdu mluvit. Půl roku spolu, krok za krokem – a pak si v Madridu nebo Limě objednáte, zasmějete se a popovídáte jako místní. 😉</p><a class="btn btn-wa" data-wa="package6" href="#" target="_blank" rel="noopener" style="margin-top:1rem"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="pkgCta">Chci slevu</span></a></div>
+      <div class="card hot"><span class="ribbon" data-t="p3rib">🔥 Oblíbené</span><h3 data-t="p3t">Balíček na 3 měsíce</h3><p class="price" data-t="p3price">Super sleva <small>🎁 výhodnější než jednotlivé lekce</small></p><p data-t="p3p">Každý týden váš pevný termín, plno konverzace a moje podpora i mezi lekcemi. Ideální start – za 3 měsíce uvidíte velký rozdíl!</p><a class="btn btn-wa" data-wa="package3" href="#" target="_blank" rel="noopener" style="margin-top:1rem"><span data-t="pkgCta">Chci slevu</span></a></div>
+      <div class="card hot6"><span class="ribbon" data-t="p4rib">💛 Nejlepší cena</span><h3 data-t="p4t">Balíček na 6 měsíců</h3><p class="price" data-t="p4price">Ještě větší sleva <small>✨ nejvýhodnější cena, kterou nabízím</small></p><p data-t="p4p">Pro ty, kdo chtějí opravdu mluvit. Půl roku spolu, krok za krokem – a pak si v Madridu nebo Limě objednáte, zasmějete se a popovídáte jako místní. 😉</p><a class="btn btn-wa" data-wa="package6" href="#" target="_blank" rel="noopener" style="margin-top:1rem"><span data-t="pkgCta">Chci slevu</span></a></div>
     </div>
   </div>
 </section>
@@ -366,8 +367,8 @@
     <div>
       <p class="eyebrow" data-t="bookEyebrow">Rezervace</p>
       <h2 data-t="bookTitle">Rezervujte si lekci zdarma</h2>
-      <p data-t="bookLead">Vyplňte 4 políčka a stiskněte tlačítko. Otevře se WhatsApp s připravenou zprávou – stačí ji jen odeslat. Odpovím co nejdřív.</p>
-      <div class="qrbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57" width="180" height="180" role="img" aria-label="QR kód: WhatsApp" shape-rendering="crispEdges"><rect width="57" height="57" fill="#fff"/><path fill="#0E3A42" d="M4 4h7v1h-7zM14 4h1v1h-1zM17 4h3v1h-3zM22 4h3v1h-3zM27 4h2v1h-2zM31 4h4v1h-4zM36 4h1v1h-1zM39 4h2v1h-2zM44 4h1v1h-1zM46 4h7v1h-7zM4 5h1v1h-1zM10 5h1v1h-1zM13 5h1v1h-1zM15 5h1v1h-1zM17 5h1v1h-1zM19 5h1v1h-1zM21 5h1v1h-1zM25 5h1v1h-1zM27 5h1v1h-1zM32 5h1v1h-1zM36 5h3v1h-3zM41 5h4v1h-4zM46 5h1v1h-1zM52 5h1v1h-1zM4 6h1v1h-1zM6 6h3v1h-3zM10 6h1v1h-1zM12 6h7v1h-7zM20 6h1v1h-1zM24 6h1v1h-1zM27 6h3v1h-3zM31 6h2v1h-2zM34 6h4v1h-4zM39 6h1v1h-1zM43 6h2v1h-2zM46 6h1v1h-1zM48 6h3v1h-3zM52 6h1v1h-1zM4 7h1v1h-1zM6 7h3v1h-3zM10 7h1v1h-1zM12 7h1v1h-1zM14 7h2v1h-2zM18 7h3v1h-3zM23 7h1v1h-1zM28 7h1v1h-1zM31 7h1v1h-1zM33 7h1v1h-1zM37 7h2v1h-2zM40 7h1v1h-1zM43 7h1v1h-1zM46 7h1v1h-1zM48 7h3v1h-3zM52 7h1v1h-1zM4 8h1v1h-1zM6 8h3v1h-3zM10 8h1v1h-1zM12 8h2v1h-2zM16 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM25 8h6v1h-6zM34 8h1v1h-1zM36 8h2v1h-2zM39 8h1v1h-1zM41 8h1v1h-1zM46 8h1v1h-1zM48 8h3v1h-3zM52 8h1v1h-1zM4 9h1v1h-1zM10 9h1v1h-1zM12 9h3v1h-3zM16 9h1v1h-1zM18 9h2v1h-2zM21 9h1v1h-1zM23 9h1v1h-1zM25 9h2v1h-2zM30 9h4v1h-4zM38 9h1v1h-1zM40 9h1v1h-1zM42 9h1v1h-1zM46 9h1v1h-1zM52 9h1v1h-1zM4 10h7v1h-7zM12 10h1v1h-1zM14 10h1v1h-1zM16 10h1v1h-1zM18 10h1v1h-1zM20 10h1v1h-1zM22 10h1v1h-1zM24 10h1v1h-1zM26 10h1v1h-1zM28 10h1v1h-1zM30 10h1v1h-1zM32 10h1v1h-1zM34 10h1v1h-1zM36 10h1v1h-1zM38 10h1v1h-1zM40 10h1v1h-1zM42 10h1v1h-1zM44 10h1v1h-1zM46 10h7v1h-7zM12 11h1v1h-1zM14 11h1v1h-1zM20 11h1v1h-1zM26 11h1v1h-1zM30 11h1v1h-1zM32 11h1v1h-1zM34 11h4v1h-4zM39 11h1v1h-1zM41 11h3v1h-3zM4 12h1v1h-1zM6 12h5v1h-5zM13 12h3v1h-3zM17 12h1v1h-1zM19 12h1v1h-1zM21 12h2v1h-2zM24 12h1v1h-1zM26 12h5v1h-5zM33 12h2v1h-2zM37 12h1v1h-1zM40 12h1v1h-1zM42 12h1v1h-1zM44 12h1v1h-1zM46 12h5v1h-5zM6 13h2v1h-2zM9 13h1v1h-1zM11 13h1v1h-1zM16 13h1v1h-1zM20 13h1v1h-1zM22 13h2v1h-2zM25 13h1v1h-1zM27 13h3v1h-3zM31 13h1v1h-1zM34 13h1v1h-1zM36 13h1v1h-1zM43 13h1v1h-1zM45 13h3v1h-3zM49 13h1v1h-1zM4 14h3v1h-3zM10 14h1v1h-1zM12 14h7v1h-7zM20 14h1v1h-1zM22 14h1v1h-1zM26 14h1v1h-1zM28 14h1v1h-1zM30 14h3v1h-3zM37 14h1v1h-1zM40 14h1v1h-1zM42 14h1v1h-1zM44 14h1v1h-1zM46 14h1v1h-1zM48 14h3v1h-3zM52 14h1v1h-1zM4 15h6v1h-6zM11 15h2v1h-2zM15 15h2v1h-2zM22 15h1v1h-1zM25 15h1v1h-1zM28 15h2v1h-2zM32 15h1v1h-1zM34 15h4v1h-4zM39 15h1v1h-1zM43 15h1v1h-1zM48 15h2v1h-2zM51 15h1v1h-1zM4 16h3v1h-3zM10 16h5v1h-5zM19 16h2v1h-2zM26 16h3v1h-3zM34 16h1v1h-1zM38 16h1v1h-1zM40 16h1v1h-1zM44 16h1v1h-1zM47 16h1v1h-1zM50 16h1v1h-1zM52 16h1v1h-1zM4 17h1v1h-1zM7 17h2v1h-2zM11 17h1v1h-1zM13 17h1v1h-1zM15 17h1v1h-1zM17 17h2v1h-2zM21 17h1v1h-1zM23 17h2v1h-2zM26 17h3v1h-3zM32 17h6v1h-6zM40 17h2v1h-2zM46 17h3v1h-3zM51 17h1v1h-1zM6 18h2v1h-2zM9 18h2v1h-2zM12 18h1v1h-1zM14 18h1v1h-1zM16 18h5v1h-5zM24 18h5v1h-5zM30 18h1v1h-1zM32 18h1v1h-1zM35 18h1v1h-1zM37 18h7v1h-7zM51 18h2v1h-2zM5 19h5v1h-5zM12 19h1v1h-1zM15 19h1v1h-1zM17 19h5v1h-5zM23 19h2v1h-2zM26 19h1v1h-1zM29 19h1v1h-1zM31 19h6v1h-6zM38 19h1v1h-1zM41 19h1v1h-1zM43 19h1v1h-1zM46 19h3v1h-3zM52 19h1v1h-1zM4 20h2v1h-2zM8 20h1v1h-1zM10 20h1v1h-1zM15 20h2v1h-2zM20 20h1v1h-1zM22 20h4v1h-4zM28 20h2v1h-2zM31 20h1v1h-1zM34 20h2v1h-2zM37 20h5v1h-5zM43 20h2v1h-2zM49 20h1v1h-1zM5 21h1v1h-1zM11 21h2v1h-2zM17 21h4v1h-4zM23 21h1v1h-1zM28 21h1v1h-1zM33 21h2v1h-2zM40 21h1v1h-1zM46 21h2v1h-2zM5 22h2v1h-2zM8 22h1v1h-1zM10 22h1v1h-1zM12 22h4v1h-4zM18 22h1v1h-1zM22 22h2v1h-2zM25 22h1v1h-1zM27 22h5v1h-5zM38 22h3v1h-3zM42 22h1v1h-1zM45 22h1v1h-1zM47 22h1v1h-1zM49 22h1v1h-1zM52 22h1v1h-1zM7 23h1v1h-1zM11 23h1v1h-1zM14 23h1v1h-1zM18 23h1v1h-1zM20 23h1v1h-1zM22 23h1v1h-1zM27 23h1v1h-1zM29 23h4v1h-4zM34 23h4v1h-4zM40 23h3v1h-3zM47 23h2v1h-2zM6 24h2v1h-2zM10 24h2v1h-2zM18 24h1v1h-1zM21 24h2v1h-2zM24 24h3v1h-3zM28 24h1v1h-1zM30 24h1v1h-1zM34 24h1v1h-1zM37 24h1v1h-1zM39 24h2v1h-2zM42 24h3v1h-3zM46 24h1v1h-1zM50 24h2v1h-2zM5 25h1v1h-1zM13 25h1v1h-1zM15 25h3v1h-3zM20 25h1v1h-1zM23 25h1v1h-1zM25 25h2v1h-2zM28 25h3v1h-3zM32 25h1v1h-1zM34 25h2v1h-2zM37 25h1v1h-1zM39 25h3v1h-3zM46 25h3v1h-3zM51 25h1v1h-1zM4 26h2v1h-2zM7 26h7v1h-7zM16 26h3v1h-3zM21 26h11v1h-11zM33 26h1v1h-1zM35 26h1v1h-1zM38 26h3v1h-3zM42 26h1v1h-1zM44 26h5v1h-5zM52 26h1v1h-1zM7 27h2v1h-2zM12 27h3v1h-3zM16 27h1v1h-1zM19 27h1v1h-1zM21 27h1v1h-1zM23 27h2v1h-2zM26 27h1v1h-1zM30 27h8v1h-8zM39 27h1v1h-1zM41 27h1v1h-1zM44 27h1v1h-1zM48 27h1v1h-1zM51 27h2v1h-2zM6 28h3v1h-3zM10 28h1v1h-1zM12 28h1v1h-1zM16 28h4v1h-4zM21 28h2v1h-2zM24 28h3v1h-3zM28 28h1v1h-1zM30 28h1v1h-1zM33 28h2v1h-2zM38 28h1v1h-1zM40 28h2v1h-2zM44 28h1v1h-1zM46 28h1v1h-1zM48 28h2v1h-2zM51 28h2v1h-2zM4 29h2v1h-2zM8 29h1v1h-1zM12 29h1v1h-1zM14 29h1v1h-1zM21 29h1v1h-1zM26 29h1v1h-1zM30 29h1v1h-1zM32 29h1v1h-1zM34 29h2v1h-2zM39 29h2v1h-2zM43 29h2v1h-2zM48 29h2v1h-2zM51 29h1v1h-1zM4 30h9v1h-9zM14 30h5v1h-5zM20 30h2v1h-2zM24 30h8v1h-8zM33 30h1v1h-1zM35 30h1v1h-1zM38 30h12v1h-12zM52 30h1v1h-1zM5 31h2v1h-2zM12 31h1v1h-1zM18 31h1v1h-1zM21 31h1v1h-1zM25 31h1v1h-1zM27 31h2v1h-2zM32 31h2v1h-2zM35 31h2v1h-2zM39 31h1v1h-1zM43 31h2v1h-2zM51 31h1v1h-1zM4 32h2v1h-2zM9 32h2v1h-2zM12 32h1v1h-1zM16 32h3v1h-3zM23 32h1v1h-1zM25 32h2v1h-2zM28 32h2v1h-2zM31 32h1v1h-1zM34 32h1v1h-1zM40 32h1v1h-1zM42 32h3v1h-3zM46 32h5v1h-5zM52 32h1v1h-1zM4 33h1v1h-1zM7 33h1v1h-1zM9 33h1v1h-1zM15 33h1v1h-1zM20 33h2v1h-2zM25 33h3v1h-3zM29 33h1v1h-1zM31 33h1v1h-1zM33 33h4v1h-4zM39 33h1v1h-1zM41 33h1v1h-1zM43 33h2v1h-2zM49 33h1v1h-1zM4 34h1v1h-1zM6 34h2v1h-2zM10 34h2v1h-2zM13 34h1v1h-1zM16 34h1v1h-1zM18 34h2v1h-2zM21 34h1v1h-1zM23 34h1v1h-1zM29 34h1v1h-1zM37 34h1v1h-1zM39 34h1v1h-1zM41 34h7v1h-7zM50 34h3v1h-3zM4 35h1v1h-1zM6 35h1v1h-1zM9 35h1v1h-1zM11 35h1v1h-1zM14 35h1v1h-1zM25 35h1v1h-1zM27 35h1v1h-1zM29 35h4v1h-4zM34 35h6v1h-6zM41 35h1v1h-1zM47 35h1v1h-1zM49 35h1v1h-1zM4 36h3v1h-3zM8 36h5v1h-5zM14 36h1v1h-1zM16 36h2v1h-2zM19 36h1v1h-1zM22 36h4v1h-4zM29 36h1v1h-1zM33 36h2v1h-2zM39 36h3v1h-3zM43 36h1v1h-1zM45 36h1v1h-1zM48 36h1v1h-1zM50 36h2v1h-2zM9 37h1v1h-1zM11 37h1v1h-1zM13 37h3v1h-3zM20 37h2v1h-2zM25 37h2v1h-2zM28 37h2v1h-2zM33 37h2v1h-2zM36 37h2v1h-2zM39 37h3v1h-3zM45 37h1v1h-1zM47 37h1v1h-1zM5 38h1v1h-1zM7 38h2v1h-2zM10 38h2v1h-2zM13 38h4v1h-4zM19 38h3v1h-3zM23 38h1v1h-1zM25 38h1v1h-1zM28 38h2v1h-2zM32 38h2v1h-2zM37 38h2v1h-2zM40 38h1v1h-1zM43 38h1v1h-1zM46 38h2v1h-2zM49 38h1v1h-1zM51 38h2v1h-2zM4 39h1v1h-1zM7 39h1v1h-1zM9 39h1v1h-1zM11 39h1v1h-1zM13 39h3v1h-3zM17 39h2v1h-2zM26 39h1v1h-1zM28 39h1v1h-1zM31 39h4v1h-4zM36 39h1v1h-1zM41 39h2v1h-2zM44 39h1v1h-1zM48 39h1v1h-1zM51 39h2v1h-2zM7 40h1v1h-1zM9 40h2v1h-2zM12 40h1v1h-1zM18 40h1v1h-1zM20 40h2v1h-2zM24 40h1v1h-1zM26 40h2v1h-2zM34 40h1v1h-1zM38 40h1v1h-1zM40 40h2v1h-2zM43 40h1v1h-1zM46 40h1v1h-1zM48 40h1v1h-1zM50 40h1v1h-1zM52 40h1v1h-1zM5 41h1v1h-1zM7 41h1v1h-1zM15 41h3v1h-3zM19 41h1v1h-1zM25 41h2v1h-2zM28 41h1v1h-1zM30 41h1v1h-1zM32 41h1v1h-1zM34 41h1v1h-1zM37 41h1v1h-1zM41 41h1v1h-1zM43 41h2v1h-2zM46 41h1v1h-1zM49 41h1v1h-1zM5 42h1v1h-1zM9 42h10v1h-10zM20 42h3v1h-3zM26 42h2v1h-2zM31 42h3v1h-3zM35 42h1v1h-1zM38 42h2v1h-2zM42 42h5v1h-5zM49 42h2v1h-2zM52 42h1v1h-1zM5 43h3v1h-3zM11 43h3v1h-3zM15 43h7v1h-7zM23 43h3v1h-3zM28 43h4v1h-4zM34 43h1v1h-1zM36 43h3v1h-3zM44 43h1v1h-1zM47 43h1v1h-1zM51 43h2v1h-2zM4 44h3v1h-3zM10 44h1v1h-1zM14 44h3v1h-3zM19 44h1v1h-1zM23 44h8v1h-8zM40 44h1v1h-1zM42 44h8v1h-8zM52 44h1v1h-1zM12 45h1v1h-1zM14 45h2v1h-2zM21 45h1v1h-1zM23 45h1v1h-1zM26 45h1v1h-1zM30 45h2v1h-2zM34 45h1v1h-1zM36 45h1v1h-1zM39 45h1v1h-1zM41 45h1v1h-1zM44 45h1v1h-1zM48 45h2v1h-2zM52 45h1v1h-1zM4 46h7v1h-7zM13 46h1v1h-1zM15 46h1v1h-1zM17 46h2v1h-2zM20 46h3v1h-3zM24 46h3v1h-3zM28 46h1v1h-1zM30 46h2v1h-2zM33 46h1v1h-1zM35 46h4v1h-4zM40 46h1v1h-1zM44 46h1v1h-1zM46 46h1v1h-1zM48 46h5v1h-5zM4 47h1v1h-1zM10 47h1v1h-1zM12 47h1v1h-1zM14 47h2v1h-2zM18 47h1v1h-1zM20 47h1v1h-1zM22 47h1v1h-1zM25 47h2v1h-2zM30 47h1v1h-1zM32 47h6v1h-6zM41 47h1v1h-1zM44 47h1v1h-1zM48 47h1v1h-1zM51 47h2v1h-2zM4 48h1v1h-1zM6 48h3v1h-3zM10 48h1v1h-1zM12 48h1v1h-1zM14 48h1v1h-1zM16 48h4v1h-4zM21 48h2v1h-2zM26 48h6v1h-6zM33 48h2v1h-2zM40 48h1v1h-1zM42 48h1v1h-1zM44 48h5v1h-5zM50 48h3v1h-3zM4 49h1v1h-1zM6 49h3v1h-3zM10 49h1v1h-1zM12 49h3v1h-3zM17 49h1v1h-1zM19 49h2v1h-2zM23 49h5v1h-5zM31 49h1v1h-1zM33 49h4v1h-4zM39 49h3v1h-3zM43 49h6v1h-6zM52 49h1v1h-1zM4 50h1v1h-1zM6 50h3v1h-3zM10 50h1v1h-1zM12 50h2v1h-2zM15 50h1v1h-1zM17 50h1v1h-1zM19 50h1v1h-1zM24 50h1v1h-1zM27 50h3v1h-3zM35 50h1v1h-1zM37 50h1v1h-1zM39 50h2v1h-2zM42 50h2v1h-2zM45 50h3v1h-3zM49 50h1v1h-1zM4 51h1v1h-1zM10 51h1v1h-1zM13 51h1v1h-1zM15 51h1v1h-1zM19 51h1v1h-1zM23 51h2v1h-2zM28 51h1v1h-1zM31 51h2v1h-2zM34 51h3v1h-3zM39 51h1v1h-1zM43 51h1v1h-1zM46 51h1v1h-1zM49 51h1v1h-1zM52 51h1v1h-1zM4 52h7v1h-7zM12 52h1v1h-1zM14 52h3v1h-3zM18 52h1v1h-1zM21 52h1v1h-1zM29 52h1v1h-1zM40 52h2v1h-2zM44 52h2v1h-2zM49 52h4v1h-4z"/></svg><p data-t="qrText">Jste na počítači? Naskenujte QR kód mobilem a napište mi rovnou na WhatsApp.</p></div>
+      <p data-t="bookLead">Odpovězte na 3 krátké otázky ve formuláři (1 minuta) a já se vám ozvu e-mailem, abychom si domluvili první lekci zdarma. 😊</p>
+      <p style="margin-top:1.5rem"><a class="btn btn-wa" href="https://docs.google.com/forms/d/e/1FAIpQLSeDAAi9HVqwUMvijp0uQM7zxOCNjRZjawAJDFILzcYAtkNaMQ/viewform" target="_blank" rel="noopener" style="font-size:1.1rem"><span data-t="formBtn">📝 Vyplnit formulář (1 min)</span></a></p>
     </div>
     <form id="bookForm" novalidate>
       <div>
@@ -417,7 +418,7 @@
         <label for="f-note" data-t="fNote">Poznámka (nepovinné)</label>
         <textarea id="f-note" name="note"></textarea>
       </div>
-      <a class="btn btn-wa" id="formSend" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg><span data-t="fSubmit">Odeslat přes WhatsApp</span></a>
+      <a class="btn btn-wa" id="formSend" href="#" target="_blank" rel="noopener"><span data-t="fSubmit">Odeslat přes WhatsApp</span></a>
       <p class="hint" id="formHint" data-t="fHint">Nemáte WhatsApp? Napište na spanishwithcyn@gmail.com</p>
     </form>
   </div>
@@ -437,14 +438,14 @@
 <footer>
   <div class="wrap">
     <span>Spanish with Cyn · Praha</span>
-    <span><a data-wa="trial" href="#" target="_blank" rel="noopener">WhatsApp +420 773 730 444</a> · <a href="mailto:spanishwithcyn@gmail.com">spanishwithcyn@gmail.com</a> · <a href="https://www.instagram.com/spanishwithcyn" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/spanishwithcyn" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.expats.cz/teachers/profile/language-teachers/mgt-cynthia-de-pinho-uvqsl" target="_blank" rel="noopener">Expats.cz</a></span>
+    <span><a href="https://docs.google.com/forms/d/e/1FAIpQLSeDAAi9HVqwUMvijp0uQM7zxOCNjRZjawAJDFILzcYAtkNaMQ/viewform" target="_blank" rel="noopener">Rezervace / Booking</a> · <a href="mailto:spanishwithcyn@gmail.com">spanishwithcyn@gmail.com</a> · <a href="https://www.instagram.com/spanishwithcyn" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/spanishwithcyn" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.expats.cz/teachers/profile/language-teachers/mgt-cynthia-de-pinho-uvqsl" target="_blank" rel="noopener">Expats.cz</a></span>
   </div>
 </footer>
 
-<a class="wa-float" data-wa="trial" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
+
 
 <script>
-const PHONE = "420773730444";
+const FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeDAAi9HVqwUMvijp0uQM7zxOCNjRZjawAJDFILzcYAtkNaMQ/viewform";
 const T = {
   cs: {}, // filled from the page
   en: {
@@ -469,7 +470,7 @@ const T = {
     p2t:"Single lesson", perHour:"/ hour", p2p:"Online or in person, at a time that suits you.",
     p3rib:"🔥 Favourite", p3t:"3-month package", p3price:"Super discount <small>🎁 better value than single lessons</small>", p3p:"Your fixed weekly slot, lots of conversation and my support between lessons too. The perfect start – in 3 months you'll feel the difference!",
     p4rib:"💛 Best price", p4t:"6-month package", p4price:"Even bigger discount <small>✨ the best price I offer</small>", p4p:"For those who really want to speak. Half a year together, step by step – and then you'll order, laugh and chat like a local in Madrid or Lima. 😉", pkgCta:"I want the discount",
-    bookEyebrow:"Booking", bookTitle:"Book your free lesson", bookLead:"Fill in 4 fields and press the button. WhatsApp opens with a ready message – just hit send. I'll reply as soon as I can.",
+    bookEyebrow:"Booking", bookTitle:"Book your free lesson", bookLead:"Answer 3 quick questions in the form (1 minute) and I will email you to arrange your free first lesson. 😊", formBtn:"📝 Fill in the form (1 min)",
     fName:"Name", fLevel:"Your level", l0:"Complete beginner", l1:"I know a little", l2:"Intermediate", l3:"Advanced",
     fGoal:"Goal", g0:"Travel", g1:"Work", g2:"Conversation", g3:"Exam (DELE)", fMode:"Format", mo1:"In person", mo2:"Either is fine",
     fTime:"When suits you?", t0:"Morning", t1:"Afternoon", t2:"Evening", t3:"Weekend", fNote:"Note (optional)", fSubmit:"Send via WhatsApp",
@@ -508,7 +509,7 @@ const MSG = {
 let lang = "cs";
 try { const saved = localStorage.getItem("swc-lang"); if (saved === "en") lang = "en"; } catch(e) {}
 
-const waUrl = text => "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(text);
+const waUrl = text => FORM;
 
 let apply = function(l){
   lang = l;
@@ -580,7 +581,7 @@ function renderQ(){
   const l = L(), u = UI[l];
   if (qi >= QUIZ.length){
     const msg = score >= 5 ? u.m3 : score >= 3 ? u.m2 : u.m1;
-    const wa = "https://wa.me/420773730444?text=" + encodeURIComponent(u.wa.replace("%s", score));
+    const wa = FORM;
     pq.innerHTML = '<div class="result"><p class="q-meta" style="justify-content:center">'+u.res+'</p><div class="big">'+score+'/6</div><p style="font-size:1.2rem;font-weight:600">'+msg+'</p><div class="actions" style="justify-content:center;margin-top:1rem"><a class="btn btn-wa" target="_blank" rel="noopener" href="'+wa+'">'+u.cta+'</a><button class="btn btn-line" type="button" id="q-again">'+u.again+'</button></div></div>';
     document.getElementById("q-again").onclick = startQuiz; return;
   }
